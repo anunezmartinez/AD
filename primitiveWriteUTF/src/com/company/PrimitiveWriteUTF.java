@@ -20,12 +20,14 @@ public class PrimitiveWriteUTF {
                 switch(menu) {
                     case 1:
                         System.out.print("Escribiendo el string : ");
-                        output.writeUTF(sc.next());
+                        sc.nextLine();
+                        output.writeUTF(sc.nextLine());
                         break;
                     case 2:
                         while(input.available() != 0){
+                            System.out.println("Quedan " + input.available() + " bytes por leer.");
                             System.out.println(input.readUTF());
-                            System.out.println(input.available() + " bytes left.");
+
                         }
                         break;
                     case 3:
